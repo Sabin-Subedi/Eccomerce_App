@@ -3,18 +3,23 @@
   "version": "1.0.0",
   "description": "Mern Shoppping Cart App",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node server/server",
     "server": "nodemon server/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder"
   },
   "author": "Sabin Subedi",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^9.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.12.7"
   },
   "devDependencies": {
     "concurrently": "^6.1.0"
